@@ -4,6 +4,12 @@ pipeline {
         stage('build') {
             steps {
                 sh 'go version'
+                sh 'echo build'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'echo deploy'
             }
         }
     }
