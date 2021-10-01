@@ -1,9 +1,15 @@
 pipeline {
-    agent { docker { image 'python:3.5.1' } }
+    agent { docker { image 'golang' } }
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                sh 'go version'
+                sh 'echo build'
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh 'echo deploy'
             }
         }
     }
